@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Online Shopping</title>
+
+  <title>Online Shopping</title>
+  <style media="screen">
+    .footer{
+      position: fixed;
+    }
+  </style>
+</head>
+
+<body>
+  {%if request.user.is_authenticated%}
+    {% include "ecom/customer_navbar.html" %}
+  {%else%}
+    {% include "ecom/navbar.html" %}
+  {%endif%}
+  <br><br><br>
+  <div class="container">
+<h3 style="text-align:left;">ONLINE SHOPPING</h3>
+<br><br>
+<h4>Who we are</4>
+<p style="line-height:1.5em;text-align:left;">
+Hello and welcome to ONLINE SHOPPING, the place to find the best LAPTOP for every taste and occasion. We thoroughly check the quality of our goods, working only with reliable suppliers so that you only receive the best quality product. We at ONLINE SHOPPING believe in high quality and exceptional customer service. But most importantly, we believe shopping is a right, not a luxury, so we strive to deliver the best products at the most affordable prices, and ship them to you regardless of where you are located.
+</p>
+<br><br><br><br>
+  </div>
+<br><br><br>
+  {% include "ecom/footer.html" %}
+</body>
+</html>
